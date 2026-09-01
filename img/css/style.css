@@ -1,9 +1,7 @@
-<header {
-    style="text-align: center;">
+header {
+    text-align: center;
 }
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #darkgray;
+body {  
+    background-color: darkgray;
 }
     
