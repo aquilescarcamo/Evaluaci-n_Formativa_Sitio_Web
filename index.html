@@ -6,35 +6,61 @@
     <title>Mi Primer Sitio</title>
     <link rel="icon" type="image/x-icon" href="img/imagescolo.jpg">
     <link rel="stylesheet" href="CSS/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">"
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>"
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </head>
-<body>  
-    <header style="text-align: center;">   
+<body>
+    <header style="text-align: center;">
         <a href="index.html">
-    <img src="img/imagenlogo.png" class="img-fluid" style="max-width: 100%; height: auto;" alt="Logo">
-        </a>  
-        <h1> Bienvenido a mi Sitio Web</h1>
+            <img src="img/imagenlogo.png" class="img-fluid" style="max-width: 100%; height: auto;" alt="Logo">
+        </a>
+        <br>
+        <img src="img/pc.jpg" alt="img"-fluid" style="max-width: 100%; height: auto; max-height: 300px; object-fit: cover;">
+        <h1> Formulario de Inscripción</h1>
     </header>
-<nav>
+    <nav>
         <ul>
             <li><a href="html/acercade.html">Inicio</a></li>
             <li><a href="html/servicios.html">Acerca de</a></li>
             <li><a href="html/contacto.html">Contacto</a></li>
         </ul>
     </nav>
+    <h2>Formulario de Inscripción</h2>
+    <form action="" method="post" enctype="multipart/form-data">
+        <label for="nombre">Nombre:</label> <input type="text" id="nombre" name="nombre" required>
+        <br><br>
+        <label for="apellido">Apellido:</label> <input type="text" id="apellido" name="apellido" required>
+        <br><br>
+        <label for="email">Correo electrónico:</label> <input type="email" id="email" name="email" required>
+        <br><br>
+        <label for="telefono">Teléfono:</label> <input type="text" id="telefono" name="telefono" required>
+        <br><br>
+        <label for="fecha_nac">Fecha de nacimiento:</label> <input type="date" id="fecha_nac" name="fecha_nac" required>
+        <br><br>
+        <label for="region">Región:</label>
+        <select id="region" name="region" required>
+            <option value="">Seleccione una región</option>
+            <option value="metropolitana">Metropolitana</option>
+            <option value="los_lagos">Los Lagos</option>
+        </select>
+        <br><br>
+        <label>Nivel educacional:</label><br>
+        <input type="radio" id="media" name="educacion" value="media" required> <label for="media">Media</label>
+        <input type="radio" id="superior" name="educacion" value="superior"> <label for="superior">Superior</label>
+        <br><br>
+        <label>Intereses:</label><br>
+        <input type="checkbox" id="tech" name="interes" value="tech"> <label for="tech">Tecnología</label>
+        <input type="checkbox" id="salud" name="interes" value="salud"> <label for="salud">Salud</label>
+        <br><br>
+        <label for="mensaje">Mensaje:</label><br>
+        <textarea id="mensaje" name="mensaje" required></textarea>
+        <br><br>
+        <label for="curriculum">Currículum:</label> <input type="file" id="curriculum" name="curriculum">
+        <br><br>
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpiar</button>
+    </form>
     <section>
-        <div id="carouselExample" class="carousel slide">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="img/menu1.jpg" class="d-block w-100" style="height: 300px; object-fit: cover;" alt="Primera imagen">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/menu2.jpg" class="d-block w-100" style="height: 300px; object-fit: cover;" alt="Segunda imagen">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/menu3.jpg" class="d-block w-100" style="height: 300px; object-fit: cover;" alt="Tercera imagen">
-                </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -45,9 +71,7 @@
                 <span class="visually-hidden">Siguiente</span>
             </button>
         </div>
-
         <article>
-            <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.</p>
             <img src="https://a.espncdn.com/i/teamlogos/soccer/500/2688.png" alt="Logo ESPN">
         </article>
         <article>
@@ -57,15 +81,5 @@
     <footer>
         <p>Derechos Reservados &copy; 2026 AQUILES CARCAMO</p>
     </footer>
-
-    <h2>Hola Aqui hay un breve resumen</h2>
-    <h3>Colo-Colo</h3>
-    <p>El Club Social y Deportivo Colo-Colo es un club de fútbol profesional chileno, con sede en la ciudad de Macul, Santiago. Fue fundado el 19 de abril de 1925 por un grupo de jugadores que se separaron del club Magallanes, liderados por David Arellano. Colo-Colo es uno de los clubes más exitosos y populares de Chile, con una rica historia y una gran base de seguidores.</p>
-    <p>El club ha ganado numerosos títulos nacionales e internacionales, incluyendo la Copa Libertadores de América en 1991, convirtiéndose en el primer y único equipo chileno en lograr este prestigioso torneo. Además, Colo-Colo ha obtenido múltiples campeonatos de la Primera División de Chile, consolidándose como uno de los equipos más laureados del país.</p>
-    <p>Colo-Colo juega sus partidos como local en el Estadio Monumental
-    <h4>Logros Principales</h4>
-    <p>el único equipo chileno que ha ganado la Copa Libertadores de América (1991).Es el club con más títulos de la Primera División de Chile.</p>
-    
-    
 </body>
 </html>
