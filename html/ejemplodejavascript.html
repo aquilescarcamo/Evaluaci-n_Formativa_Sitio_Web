@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        //Codigo Java Script
+        function apagarAmpolleta() {
+            document.getElementById("imagenampolletaencendida").src="../img/ampolletaapagada.png";
+
+        }
+
+        function encenderAmpolleta() {
+            document.getElementById("imagenampolletaapagada").src="../img/ampolletaprendida.png";
+
+        }
+    </script>
+</head>
+<body>
+    <h1 style="text-align: center;">Ejemplo de JavaScript</h1>
+    <div style=""display: flex; justify-content: center; align-items: center;">
+        <img id="imagenampolletaencendida" src="../img/ampolletaprendida.png" alt="Imagen encendida" class="img-fluid" style="max-width: 100%; height: auto; max-height: 300px; object-fit: cover;">
+        <img id="imagenampolletaapagada" src="../img/ampolletaapagada.png" alt="Imagen apagada" class="img-fluid" style="max-width: 100%; height: auto; max-height: 300px; object-fit: cover;">
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center;">
+    <button style="margin: 10px;" onclick="encenderAmpolleta()">Encender ampolleta</button>
+    <button style="margin: 10px;" onclick="apagarAmpolleta()">Apagar ampolleta</button>
+</body>
+</html>
