@@ -29,17 +29,22 @@
         <ul>
         </ul>
     </nav>
-    <form name="myForm" action="" onsubmit="return validateForm()" method="post" enctype="multipart/form-data">
-    <label for="nombre">Nombre:</label> <input type="text" id="nombre" name="fname">
+   <form id="miFormulario" action="" method="post">
+    <label for="nombre">Nombre:</label> <input type="text" id="nombre" name="nombre">
+    <span id="error-nombre" class="error-msg" style="display:none; color:red;">Completa este campo</span>
     <br><br>
-        <label for="apellido">Apellido:</label> <input type="text" id="apellido" name="apellido" required>
-        <br><br>
-        <label for="email">Correo electrónico:</label> <input type="email" id="email" name="email" required>
-        <br><br>
-        <label for="telefono">Teléfono:</label> <input type="text" id="telefono" name="telefono" required>
-        <br><br>
-        <label for="fecha_nac">Fecha de nacimiento:</label> <input type="date" id="fecha_nac" name="fecha_nac" required>
-        <br><br>
+    <label for="apellido">Apellido:</label> <input type="text" id="apellido" name="apellido">
+    <span id="error-apellido" class="error-msg" style="display:none; color:red;">Completa este campo</span>
+    <br><br>
+    <label for="email">Correo electrónico:</label> <input type="email" id="email" name="email">
+    <span id="error-email" class="error-msg" style="display:none; color:red;">Completa este campo</span>
+    <br><br>
+    <label for="telefono">Teléfono:</label> <input type="text" id="telefono" name="telefono">
+    <span id="error-telefono" class="error-msg" style="display:none; color:red;">Completa este campo</span>
+    <br><br>
+    <label for="fecha_nac">Fecha de nacimiento:</label> <input type="date" id="fecha_nac" name="fecha_nac">
+    <span id="error-fecha" class="error-msg" style="display:none; color:red;">Completa este campo</span>
+    <br><br>
         <label for="region">Región:</label>
         <select id="region" name="region" required>
             <option value="">Seleccione una región</option>

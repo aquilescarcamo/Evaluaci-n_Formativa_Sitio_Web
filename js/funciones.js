@@ -25,15 +25,36 @@ function divisionDosNumeros() {
     let resultado = num2 !== 0 ? num1 / num2 : "No se puede dividir por 0";
     document.getElementById("resultado").innerText = resultado;
 }
+
 $(document).ready(function() {
-    $("form").submit(function(event) {
-        let nombre = $("#nombre").val();
-        let apellido = $("#apellido").val();
-        let email = $("#email").val();
-        
-        if (nombre === "" || apellido === "" || email === "") {
-            alert("Completa todos los campos obligatorios.");
-            event.preventDefault(); 
+    $("#miFormulario").submit(function(event) {
+        var esValido = true;
+
+        $(".error-msg").hide();
+
+        if ($("#nombre").val().trim() === "") {
+            $("#error-nombre").show();
+            esValido = false;
+        }
+        if ($("#apellido").val().trim() === "") {
+            $("#error-apellido").show();
+            esValido = false;
+        }
+        if ($("#email").val().trim() === "") {
+            $("#error-email").show();
+            esValido = false;
+        }
+        if ($("#telefono").val().trim() === "") {
+            $("#error-telefono").show();
+            esValido = false;
+        }
+        if ($("#fecha_nac").val() === "") {
+            $("#error-fecha").show();
+            esValido = false;
+        }
+
+        if (!esValido) {
+            event.preventDefault();[cite: 13]
         }
     });
 });
