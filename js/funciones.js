@@ -25,10 +25,15 @@ function divisionDosNumeros() {
     let resultado = num2 !== 0 ? num1 / num2 : "No se puede dividir por 0";
     document.getElementById("resultado").innerText = resultado;
 }
-function validateForm() {
-    let x = document.forms["myForm"]["fname"].value;
-    if (x == "") {
-        alert("El nombre debe ser completado");
-        return false;
-    }
-}
+$(document).ready(function() {
+    $("form").submit(function(event) {
+        let nombre = $("#nombre").val();
+        let apellido = $("#apellido").val();
+        let email = $("#email").val();
+        
+        if (nombre === "" || apellido === "" || email === "") {
+            alert("Completa todos los campos obligatorios.");
+            event.preventDefault(); 
+        }
+    });
+});
