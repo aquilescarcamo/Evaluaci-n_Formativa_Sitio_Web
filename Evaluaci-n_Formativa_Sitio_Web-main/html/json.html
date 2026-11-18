@@ -3,10 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>Datos desde JSON</title>
     <link rel="icon" type="image/x-icon" href="../img/logo1.jpg">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
+=======
+    <title>Datos</title>
+    <link rel="icon" type="image/x-icon" href="../img/logo1.jpg">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+>>>>>>> 93710c9ba2679fff8537eb4df636676e98c3043f
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -30,6 +37,7 @@
     </ul>
     </nav>
     <main class="container my-4 text-center">
+<<<<<<< HEAD
         <h2>Lista de Personas (JSON)</h2>
         <ol id="lista" class="lista-datos"></ol>
     </main>
@@ -46,6 +54,32 @@
                 });
             })
             .catch(error => console.error('Error al cargar el archivo JSON:', error));
+=======
+        <h2>Personas</h2>
+        <table class="table table-striped table-bordered w-auto mx-auto">
+            <thead>
+                <tr><th>Nombre</th><th>Edad</th><th>Correo</th></tr>
+            </thead>
+            <tbody id="tabla"></tbody>
+        </table>
+        <p id="mensaje" class="text-danger"></p>
+    </main>
+    <script>
+        fetch('../json/datos.json')
+            .then(res => res.json())
+            .then(personas => {
+                const tabla = document.getElementById('tabla');
+                personas.forEach(p => {
+                    const fila = tabla.insertRow();
+                    fila.insertCell().textContent = p.nombre;
+                    fila.insertCell().textContent = p.edad;
+                    fila.insertCell().textContent = p.correo;
+                });
+            })
+            .catch(() => {
+                document.getElementById('mensaje').textContent = 'No se pudo cargar datos.json (abre el sitio con Live Server o GitHub Pages).';
+            });
+>>>>>>> 93710c9ba2679fff8537eb4df636676e98c3043f
     </script>
     <footer class="text-center py-3 bg-dark text-white mt-4">
         <p class="mb-0">Derechos Reservados &copy; 2026 AQUILES CARCAMO</p>
