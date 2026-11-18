@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos</title>
+    <link rel="icon" type="image/x-icon" href="../img/logo1.jpg">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="text-center my-3">
+        <a href="../index.html">
+            <img src="../img/imagenlogo.png" class="img-fluid" style="max-width: 100%; height: auto; max-height: 300px; object-fit: cover;" alt="Logo" width="600" height="230">
+        </a>
+        <h1 class="mt-2">Bienvenido a mi Sitio Web</h1>
+    </header>
+    <nav class="mb-4 text-center">
+    <ul class="list-inline">
+        <li class="list-inline-item"><a href="../index.html">Inicio</a></li>
+        <li class="list-inline-item"><a href="acercade.html">Acerca de</a></li>
+        <li class="list-inline-item"><a href="servicios.html">Servicios</a></li>
+        <li class="list-inline-item"><a href="contacto.html">Contacto</a></li>
+        <li class="list-inline-item"><a href="calculadora.html">Calculadora</a></li>
+        <li class="list-inline-item"><a href="ejemplodejavascript.html">Ejemplos de JS</a></li>
+        <li class="list-inline-item"><a href="json.html">JSON</a></li>
+        <li class="list-inline-item"><a href="localstorage.html">LocalStorage</a></li>
+        <li class="list-inline-item"><a href="googsheets.html">Google Sheets</a></li>
+    </ul>
+    </nav>
+    <main class="container my-4 text-center">
+        <h2>Personas</h2>
+        <table class="table table-striped table-bordered w-auto mx-auto">
+            <thead>
+                <tr><th>Nombre</th><th>Edad</th><th>Correo</th></tr>
+            </thead>
+            <tbody id="tabla"></tbody>
+        </table>
+        <p id="mensaje" class="text-danger"></p>
+    </main>
+    <script>
+        fetch('../json/datos.json')
+            .then(res => res.json())
+            .then(personas => {
+                const tabla = document.getElementById('tabla');
+                personas.forEach(p => {
+                    const fila = tabla.insertRow();
+                    fila.insertCell().textContent = p.nombre;
+                    fila.insertCell().textContent = p.edad;
+                    fila.insertCell().textContent = p.correo;
+                });
+            })
+            .catch(() => {
+                document.getElementById('mensaje').textContent = 'No se pudo cargar datos.json (abre el sitio con Live Server o GitHub Pages).';
+            });
+    </script>
+    <footer class="text-center py-3 bg-dark text-white mt-4">
+        <p class="mb-0">Derechos Reservados &copy; 2026 AQUILES CARCAMO</p>
+    </footer>
+</body>
+</html>
