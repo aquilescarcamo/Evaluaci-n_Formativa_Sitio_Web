@@ -1,0 +1,7 @@
+[
+    {"nombre": "Aquiles Cárcamo", "edad": 22, "correo": "aquiles@example.com"},
+    {"nombre": "Camila Soto", "edad": 24, "correo": "camila.soto@example.com"},
+    {"nombre": "Matías Vargas", "edad": 21, "correo": "matias.vargas@example.com"},
+    {"nombre": "Fernanda Rojas", "edad": 23, "correo": "fernanda.rojas@example.com"},
+    {"nombre": "Joaquín Muñoz", "edad": 25, "correo": "joaquin.munoz@example.com"}
+]

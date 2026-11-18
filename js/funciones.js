@@ -26,7 +26,7 @@ function divisionDosNumeros() {
     document.getElementById("resultado").innerText = resultado;
 }
 
-$(document).ready(function() {
+if (typeof $ !== "undefined") $(document).ready(function() {
     $("#miFormulario").submit(function(event) {
         var esValido = true;
 
@@ -54,7 +54,7 @@ $(document).ready(function() {
         }
 
         if (!esValido) {
-            event.preventDefault();[cite: 13]
+            event.preventDefault();
         }
     });
 });
