@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejemplo de JavaScript</title>
+    <script>
+        function apagarAmpolleta() {
+            document.getElementById("imagenampolletaapagada").style.display = "block";
+            document.getElementById("imagenampolletaencendida").style.display = "none";
+        }
+
+        function encenderAmpolleta() {
+            document.getElementById("imagenampolletaencendida").style.display = "block";
+            document.getElementById("imagenampolletaapagada").style.display = "none";
+        }
+    </script>
+</head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<body>
+<nav class="mb-4 text-center">
+    <ul class="list-inline">
+        <li class="list-inline-item"><a href="../index.html">Inicio</a></li>
+        <li class="list-inline-item"><a href="acercade.html">Acerca de</a></li>
+        <li class="list-inline-item"><a href="servicios.html">Servicios</a></li>
+        <li class="list-inline-item"><a href="contacto.html">Contacto</a></li>
+        <li class="list-inline-item"><a href="calculadora.html">Calculadora</a></li>
+        <li class="list-inline-item"><a href="ejemplodejavascript.html">Ejemplos de JS</a></li>
+        <li class="list-inline-item"><a href="json.html">JSON</a></li>
+        <li class="list-inline-item"><a href="localstorage.html">LocalStorage</a></li>
+        <li class="list-inline-item"><a href="googsheets.html">Google Sheets</a></li>
+    </ul>
+</nav>
+
+    <h1 style="text-align: center;">Ejemplo de JavaScript</h1>
+    <div style="display: flex; justify-content: center; align-items: center;">
+        <img id="imagenampolletaapagada" src="../img/ampolletaapagada.png" alt="Imagen apagada" style="max-width: 100%; height: auto; max-height: 300px;">
+        <img id="imagenampolletaencendida" src="../img/ampolletaprendida.png" alt="Imagen encendida" style="max-width: 100%; height: auto; max-height: 300px; display: none;">
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center; margin-top: 20px;">
+        <button style="margin: 10px;" onclick="apagarAmpolleta()">apagar ampolleta</button>
+        <button style="margin: 10px;" onclick="encenderAmpolleta()">Encender ampolleta</button>
+    </div>
+</body>
+</html>
